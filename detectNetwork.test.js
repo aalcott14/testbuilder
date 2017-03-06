@@ -337,5 +337,139 @@ describe('Maestro', function() {
   });
 });
 
-describe('should support China UnionPay')
-describe('should support Switch')
+/*
+for (var prefix = 644; prefix <= 649; prefix++) {
+  (function(prefix) {
+    it('has a prefix of ' + prefix + ' and a length of 16');
+    it('has a prefix of ' + prefix + ' and a length of 19');
+  })(prefix)
+}
+*/
+
+describe('China UnionPay', function () {
+
+  var assert = chai.assert;
+
+  for (var prefix = 622126; prefix <= 622925; prefix++) {
+    (function(prefix) {
+      it('has a prefix of ' + prefix + ' and a length of 16', function () {
+        assert(detectNetwork(prefix.toString() + '1234567890') === 'China UnionPay');
+      });
+    })(prefix)
+  }
+
+  for (var prefix = 622126; prefix <= 622925; prefix++) {
+    (function(prefix) {
+      it('has a prefix of ' + prefix + ' and a length of 17', function () {
+        assert(detectNetwork(prefix.toString() + '12345678901') === 'China UnionPay');
+      });
+    })(prefix)
+  }
+
+  for (var prefix = 622126; prefix <= 622925; prefix++) {
+    (function(prefix) {
+      it('has a prefix of ' + prefix + ' and a length of 18', function () {
+        assert(detectNetwork(prefix.toString() + '123456789012') === 'China UnionPay');
+      });
+    })(prefix)
+  }
+
+  for (var prefix = 622126; prefix <= 622925; prefix++) {
+    (function(prefix) {
+      it('has a prefix of ' + prefix + ' and a length of 19', function () {
+        assert(detectNetwork(prefix.toString() + '1234567890123') === 'China UnionPay');
+      });
+    })(prefix)
+  }
+
+  for (var prefix = 622126; prefix <= 622925; prefix++) {
+    (function(prefix) {
+      it('has a prefix of ' + prefix + ' and a length of 19', function () {
+        assert(detectNetwork(prefix.toString() + '1234567890123') === 'China UnionPay');
+      });
+    })(prefix)
+  }
+  
+  it('has a prefix of 624 and a length of 16', function () {
+    assert(detectNetwork('6241234567890123') === 'China UnionPay');
+  });
+
+  it('has a prefix of 624 and a length of 17', function () {
+    assert(detectNetwork('62412345678901234') === 'China UnionPay');
+  });
+
+  it('has a prefix of 624 and a length of 18', function () {
+    assert(detectNetwork('624123456789012345') === 'China UnionPay');
+  });
+
+  it('has a prefix of 624 and a length of 19', function () {
+    assert(detectNetwork('6241234567890123456') === 'China UnionPay');
+  });
+
+  it('has a prefix of 625 and a length of 16', function () {
+    assert(detectNetwork('6251234567890123') === 'China UnionPay');
+  });
+
+  it('has a prefix of 625 and a length of 17', function () {
+    assert(detectNetwork('62512345678901234') === 'China UnionPay');
+  });
+
+  it('has a prefix of 625 and a length of 18', function () {
+    assert(detectNetwork('625123456789012345') === 'China UnionPay');
+  });
+
+  it('has a prefix of 625 and a length of 19', function () {
+    assert(detectNetwork('6251234567890123456') === 'China UnionPay');
+  });
+
+  it('has a prefix of 626 and a length of 16', function () {
+    assert(detectNetwork('6261234567890123') === 'China UnionPay');
+  });
+
+  it('has a prefix of 626 and a length of 17', function () {
+    assert(detectNetwork('62612345678901234') === 'China UnionPay');
+  });
+
+  it('has a prefix of 626 and a length of 18', function () {
+    assert(detectNetwork('626123456789012345') === 'China UnionPay');
+  });
+
+  it('has a prefix of 626 and a length of 19', function () {
+    assert(detectNetwork('6261234567890123456') === 'China UnionPay');
+  });
+
+  for (var prefix = 6282; prefix <= 6288; prefix++) {
+    (function(prefix) {
+      it('has a prefix of ' + prefix + ' and a length of 16', function () {
+        assert(detectNetwork(prefix.toString() + '123456789012') === 'China UnionPay');
+      });
+    })(prefix)
+  }
+
+  for (var prefix = 6282; prefix <= 6288; prefix++) {
+    (function(prefix) {
+      it('has a prefix of ' + prefix + ' and a length of 17', function () {
+        assert(detectNetwork(prefix.toString() + '1234567890123') === 'China UnionPay');
+      });
+    })(prefix)
+  }
+
+  for (var prefix = 6282; prefix <= 6288; prefix++) {
+    (function(prefix) {
+      it('has a prefix of ' + prefix + ' and a length of 18', function () {
+        assert(detectNetwork(prefix.toString() + '12345678901234') === 'China UnionPay');
+      });
+    })(prefix)
+  }
+
+  for (var prefix = 6282; prefix <= 6288; prefix++) {
+    (function(prefix) {
+      it('has a prefix of ' + prefix + ' and a length of 19', function () {
+        assert(detectNetwork(prefix.toString() + '123456789012345') === 'China UnionPay');
+      });
+    })(prefix)
+  }
+});
+  
+
+
