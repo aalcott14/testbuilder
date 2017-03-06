@@ -24,7 +24,7 @@ var detectNetwork = function(cardNumber) {
   	return 'Diner\'s Club';
   } else if ((prefix2 === '34' || prefix2 === '37') && length === 15) {
   	return "American Express";
-  } else if ((prefix4 = '4903' || prefix4 === '4905' || prefix4 === '4911' || prefix4 === '4936' || prefix6 === '564182' || prefix6 === '633110' || prefix4 === '6333' || prefix4 === '6759') && (length === 16 || length === 18 || length === 19)) {
+  } else if ((prefix4 === '4903' || prefix4 === '4905' || prefix4 === '4911' || prefix4 === '4936' || prefix6 === '564182' || prefix6 === '633110' || prefix4 === '6333' || prefix4 === '6759') && (length === 16 || length === 18 || length === 19)) {
     return 'Switch';
   } else if (prefix1 === '4' && (length === 13 || length === 16 || length === 19)) {
   	return 'Visa';
